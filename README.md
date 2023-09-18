@@ -9,3 +9,7 @@ laravelで掲示板作成
 - curl -s "https://laravel.build/laravel-study?with=mysql,mailpit" | bash
 - ./vendor/bin/sail up -d
 - ./vendor/bin/sail down
+
+### Windows上でDocker環境にmntして、いつものコマンドにする
+- docker compose up -d
+- docker compose down
