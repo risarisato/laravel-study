@@ -1,6 +1,7 @@
 {{-- 継承させる --}}
 @extends('layouts.default')
 
+{{-- @sectionは子ビュー --}}
 @section('title', 'さぁ、はじめよう！')
 @section('content')
     <p>

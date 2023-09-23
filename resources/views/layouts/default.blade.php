@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
+{{-- header部分の継承 --}}
 <head>
     <meta charset="UTF-8">
-    {{-- <title>【ここにページごとに個別のタイトルが入ります。】</title> --}}
+    {{-- @yieldは親レイアウトを維持する --}}
     <title>@yield('title', 'Larabel9学習')</title>
     <style>
         .container {
@@ -54,13 +55,13 @@
         </header>
 
         <main>
-            {{-- 【ここにページごとに個別のタイトルが入ります】--}}
-            {{-- ここにページごとに個別のコンテンツが入ります】--}}
+            {{-- @yieldは親レイアウトを維持する --}}
             <h2>@yield('title', 'Larabel9学習')</h2>
             @yield('content')
         </main>
         <footer>
-            <small>&copy; 2022 ◯◯△△◯◯△△</small>
+            {{-- footer部分の継承 --}}
+            <small>&copy; 2022 risarisato</small>
         </footer>
     </div>
 </body>

@@ -1,5 +1,6 @@
 @extends('layouts.default')
 
+{{-- @sectionは子ビュー --}}
 @section('title', 'カリキュラムについて')
 @section('content')
     <section>
