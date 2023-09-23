@@ -13,9 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+# Topページを表示する
+Route::get('/' , fn () => view(view: 'index'));
+
+# curriculumページを表示する
+Route::get('/curriculum' , fn () => view(view: 'curriculum'));
+
 
 # hello_worldを表示する①
 Route::get('/hello', fn() => view('hello',  [
