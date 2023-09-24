@@ -1,4 +1,4 @@
-### 14. コントローラーの使い方から
+### 15. 送信データの取得方法
 
 ## laravel-study
 laravelで掲示板作成
@@ -19,7 +19,7 @@ laravelで掲示板作成
 - @yieldは親レイアウトテンプレート内でそのセクションを表示するための場所を指定
 - @extends親ビューレイアウトを指定し、子ビューがその親レイアウトを継承する
 - @sectionは子ビューでセクションを定義し
-  
+
 ![image](https://github.com/risarisato/laravel-study/assets/88628553/54856696-9554-4577-92b1-1b8a4f04b536)
 
 

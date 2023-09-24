@@ -1,5 +1,8 @@
 <?php
 
+// インポートして、短く書く
+use App\Http\Controllers\GameController;
+use App\Http\Controllers\UtilityController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,3 +49,53 @@ Route::get('/hello_world_fn' , fn () => '<!DOCTYPE html>
 </html>
 ');
 
+// 世界の時間
+// Route::get('/world-time', [App\Http\Controllers\UtilityController::class, 'worldTime']);
+// インポートしないと上記にように長く記載しないといけない
+Route::get('/world-time', [UtilityController::class, 'worldTime']);
+    //下記をコントローラに移動した
+    //$timeDiff = [
+    //    '東京' => 0,
+    //    'シンガポール' => -1,
+    //    'パリ' => -8,
+    //    'ロンドン' => -9,
+    //    'ニューヨーク' => -14,
+    //    'ロサンゼルス' => -17,
+    //    'ハワイ' => -19,
+    //];
+    //$times = array_map(fn($diff) => now()->addHours($diff), $timeDiff);
+    //return view('world-time', ['times' => $times]);
+
+
+// おみくじ
+//Route::get('/omikuji', function () {
+//    $fortunes = ['大吉', '中吉', '小吉', '吉', '末吉', '凶', '大凶'];
+//    $resultIndex = array_rand($fortunes);
+//    $result = $fortunes[$resultIndex];
+//    return view('omikuji', ['result' => $result]);
+//});
+
+// おみくじ
+Route::get('/omikuji', [GameController::class, 'omikuji']);
+
+// モンティ・ホール問題
+Route::get('/monty-hall', [GameController::class, 'montyhall']);
+
+
+// モンティ・ホール問題
+//Route::get('/monty-hall', function () {
+//    $results = [];
+//    for ($i = 0; $i < 100; $i++) {
+//        $options = [true, false, false];
+//        shuffle($options);
+//
+//        $selectedIndex = array_rand($options);
+//        $notSelectedIndexes = array_filter($options, fn($index) => $index !== $selectedIndex, ARRAY_FILTER_USE_KEY);
+//        $removeIndex = array_search(false, $notSelectedIndexes);
+//        unset($notSelectedIndexes[$removeIndex]);
+//
+//        $changedIndex = key($notSelectedIndexes);
+//        $results[] = $options[$changedIndex];
+//    }
+//    $wonCount = count(array_filter($results, fn($result) => $result));
+//    return view('monty-hall', ['results' => $results, 'wonCount' => $wonCount]);
