@@ -3,6 +3,7 @@
 // インポートして、短く書く
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\UtilityController;
+use App\Http\Controllers\RequestSampleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -95,3 +96,18 @@ Route::get('/monty-hall', [GameController::class, 'montyhall']);
 //    }
 //    $wonCount = count(array_filter($results, fn($result) => $result));
 //    return view('monty-hall', ['results' => $results, 'wonCount' => $wonCount]);
+
+// リクエスト
+Route::get('/form', [RequestSampleController::class, 'form']);
+
+// type '/query-string'>>'/query-strings'と'queryString'＞'queryStrings'
+Route::get('/query-strings', [RequestSampleController::class, 'queryStrings']);
+
+// ルートパラメーターの例：/route-parameters/{id:1}など
+Route::get('/users/{id}', [RequestSampleController::class, 'profile'])
+    // 名前付きルート:view側でroute関数を使うことで、URLを変更しても、リンク先を変更しなくても良くなる
+    ->name('profile');
+Route::get('/route-Link', [RequestSampleController::class, 'routeLink']);
+
+// 複数のルートパラメーターの例
+Route::get('/products/{category}/{year}', [RequestSampleController::class, 'productsArchive']);
