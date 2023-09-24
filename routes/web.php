@@ -66,7 +66,8 @@ Route::get('/world-time', [UtilityController::class, 'worldTime']);
     //$times = array_map(fn($diff) => now()->addHours($diff), $timeDiff);
     //return view('world-time', ['times' => $times]);
 
-
+// おみくじ
+Route::get('/omikuji', [GameController::class, 'omikuji']);
 // おみくじ
 //Route::get('/omikuji', function () {
 //    $fortunes = ['大吉', '中吉', '小吉', '吉', '末吉', '凶', '大凶'];
@@ -75,13 +76,8 @@ Route::get('/world-time', [UtilityController::class, 'worldTime']);
 //    return view('omikuji', ['result' => $result]);
 //});
 
-// おみくじ
-Route::get('/omikuji', [GameController::class, 'omikuji']);
-
 // モンティ・ホール問題
 Route::get('/monty-hall', [GameController::class, 'montyhall']);
-
-
 // モンティ・ホール問題
 //Route::get('/monty-hall', function () {
 //    $results = [];
