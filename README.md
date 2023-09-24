@@ -23,6 +23,13 @@ laravelで掲示板作成
 ![image](https://github.com/risarisato/laravel-study/assets/88628553/54856696-9554-4577-92b1-1b8a4f04b536)
 
 
+## コントローラーの処理
+- web.phpにコントローラーの処理やviewも記述できる
+- 処理はコントローラーに記述して、表示はviewに、ルーティングはweb.phpが「MVC」モデルの考え方
+- web.phpにパスを長く書くのが面倒なのでuseインポート
+![image](https://github.com/risarisato/laravel-study/assets/88628553/5a874040-859b-4c4b-a371-68aac0374023)
+
+
 
 
 
