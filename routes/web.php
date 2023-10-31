@@ -118,3 +118,24 @@ Route::get('/login', [RequestSampleController::class, 'loginForm']);
 // ログイン処理＞＞パスワードのget送信はダメ！！
 // ログイン処理：post
 Route::post('/login', [RequestSampleController::class, 'login'])->name('login');
+
+/*
+// よくある7ルートの例
+Route::get('/events', [EventController::class, 'index']);->name('events.index'); // 一覧表示
+Route::get('/events/{event}', [EventController::class, 'show']);->name('events.show'); // 詳細表示
+Route::get('/events/create', [EventController::class, 'create']);->name('events.create'); // 登録フォーム
+Route::post('/events', [EventController::class, 'store']);->name('events.store'); // 登録処理
+Route::get('/events/{event}/edit', [EventController::class, 'edit']);->name('events.edit'); // 更新フォーム
+Route::match(['put', 'patch'], '/events/{event}', [EventController::class, 'update']);->name('events.update'); // 更新処理
+Route::delete('/events/{event}', [EventController::class, 'destroy']);->name('events.destroy'); // 削除処理
+
+// 指定したもの「only」
+Route::resource('events', EventController::class)->only(['index', 'create', 'store']); // 一覧、登録フォーム、登録処理のみ
+
+// 指定したものを除く「except」
+Route::resource('events', EventController::class)->except(['edit', 'update', 'destroy']); // 更新フォーム、更新処理、削除処理を除く
+*/
+// インポートして、短く書く
+use App\Http\Controllers\EventController;
+// 7ルートを1つにまとめる「resource」メソッド
+Route::resource('events', EventController::class);
