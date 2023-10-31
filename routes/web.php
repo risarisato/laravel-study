@@ -97,9 +97,6 @@ Route::get('/monty-hall', [GameController::class, 'montyhall']);
 //    $wonCount = count(array_filter($results, fn($result) => $result));
 //    return view('monty-hall', ['results' => $results, 'wonCount' => $wonCount]);
 
-// リクエスト
-Route::get('/form', [RequestSampleController::class, 'form']);
-
 // type '/query-string'>>'/query-strings'と'queryString'＞'queryStrings'
 Route::get('/query-strings', [RequestSampleController::class, 'queryStrings']);
 
@@ -111,3 +108,13 @@ Route::get('/route-Link', [RequestSampleController::class, 'routeLink']);
 
 // 複数のルートパラメーターの例
 Route::get('/products/{category}/{year}', [RequestSampleController::class, 'productsArchive']);
+
+// リクエスト
+Route::get('/form', [RequestSampleController::class, 'form']);
+
+// ログイン
+Route::get('/login', [RequestSampleController::class, 'loginForm']);
+
+// ログイン処理＞＞パスワードのget送信はダメ！！
+// ログイン処理：post
+Route::post('/login', [RequestSampleController::class, 'login'])->name('login');
