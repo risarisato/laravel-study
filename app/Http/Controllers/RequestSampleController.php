@@ -7,11 +7,6 @@ use Illuminate\Http\Request;
 
 class RequestSampleController extends Controller
 {
-    public function form()
-    {
-        return view(view: 'form');
-    }
-
     public function queryStrings(Request $request)
     {
         // $keyword = $request->keyword;
@@ -39,5 +34,26 @@ class RequestSampleController extends Controller
         //route関数の第一引数には、ルート名を指定する
         $url = route('profile', ['id' => 1, 'photo' => 'yes']);
         return 'プロフィールページURLは' . $url . 'です。';
+    }
+
+    // ログインformを表示
+    public function form()
+    {
+        return view(view: 'form');
+    }
+
+    // ログイン処理作成
+    public function loginForm()
+    {
+        return view(view: 'login');
+    }
+
+    // ログイン処理の結果を表示
+    public function login(Request $request)
+    {
+        if ($request->get( key: 'email') === 'user@example.com' && $request->get(key: 'password') === '12345678') {
+            return 'ログイン成功しました。';
+        }
+        return 'ログイン失敗です。';
     }
 }
