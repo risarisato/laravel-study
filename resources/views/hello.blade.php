@@ -1,3 +1,7 @@
+@extends('layouts.default')
+
+@section('title', 'さぁ、はじめよう！')
+@section('content')
 <!DOCTYPE html>
 <html lang="ja">
 <head>

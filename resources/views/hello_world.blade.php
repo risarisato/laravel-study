@@ -1,3 +1,7 @@
+@extends('layouts.default')
+
+@section('title', 'はろーわーるど')
+@section('content')
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -23,3 +27,4 @@
     // PHP内のコメントです
 </body>
 </html>
+@endsection

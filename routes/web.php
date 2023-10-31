@@ -46,6 +46,8 @@ Route::get('/hello_world_fn' , fn () => '<!DOCTYPE html>
 </head>
 <body>
     <h1>こんにちは</h1>
+    <p>これは、HTMLを表示しています。</p>
+    <p>web.phpに直接記述しています</p>
 </body>
 </html>
 ');
