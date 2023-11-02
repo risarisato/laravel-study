@@ -18,4 +18,5 @@
     <h3><a href="{{ url('/omikuji') }}">omikujiページ</a></h3>
     <h3><a href="{{ url('/monty-hall') }}">monty-hallページ</a></h3>
     <h3><a href="{{ url('/events/create') }}">events/createページ</a></h3>
+    <h3><a href="{{ url('/hi-low') }}">hi-lowページ</a></h3>
 @endsection
