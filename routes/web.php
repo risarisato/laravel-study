@@ -141,3 +141,8 @@ Route::resource('events', EventController::class)->except(['edit', 'update', 'de
 use App\Http\Controllers\EventController;
 // 7ルートを1つにまとめる「resource」メソッド
 Route::resource('events', EventController::class);
+
+// ハイローゲーム:インポートを忘れずに！
+use App\Http\Controllers\HiLowController;
+Route::get('/hi-low', [HiLowController::class, 'index'])->name('hi-low');
+Route::post('/hi-low', [HiLowController::class, 'result']);
