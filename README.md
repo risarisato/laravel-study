@@ -2,6 +2,9 @@
 「./vendor/bin/sail」にsailコマンドがある
 ./vendor/bin/sail artisan storage:link＝シンボリックリンクを作成する
 ./vendor/bin/sail artisan make:controller PhotoController -r コントローラーをすべて作成する
+
+![image](https://github.com/risarisato/laravel-study/assets/88628553/171f7f04-a6e9-48eb-94db-4b0bfbb5f248)
+
 ### 21. Sessionの使い方：複数ページでデータをまたぐデータ管理
 アクセスしたブラブザごとのデータをサーバに保存する仕組み、フラッシュと組み合わせて使用する=更新ボタンでの2重送信防止できる
 ![image](https://github.com/risarisato/laravel-study/assets/88628553/5e405867-44a0-4db0-800f-d985965c06fc)
