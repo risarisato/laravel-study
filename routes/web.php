@@ -146,3 +146,10 @@ Route::resource('events', EventController::class);
 use App\Http\Controllers\HiLowController;
 Route::get('/hi-low', [HiLowController::class, 'index'])->name('hi-low');
 Route::post('/hi-low', [HiLowController::class, 'result']);
+
+// ファイル管理
+use App\Http\Controllers\PhotoController;
+Route::resource('photos', PhotoController::class)->only(['create', 'store', 'show', 'destroy']);
+
+// ダウンロード:resourceにはダウンロードが含まれてないので、追加する
+Route::get('/photos/{photo}/download', [PhotoController::class, 'download'])->name('photos.download');
