@@ -19,4 +19,6 @@
     <h3><a href="{{ url('/monty-hall') }}">monty-hallページ</a></h3>
     <h3><a href="{{ url('/events/create') }}">events/createページ</a></h3>
     <h3><a href="{{ url('/hi-low') }}">hi-lowページ</a></h3>
+    <h3><a href="{{ url('/photos/create') }}">photos/createページ</a>　失敗：画像ファイルパスが取得できない</h3>
+    <h3><a href="{{ url('/photos/show') }}">photos/showページ</a>　失敗</h3>
 @endsection
